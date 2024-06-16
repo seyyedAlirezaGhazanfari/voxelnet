@@ -39,7 +39,7 @@ if __name__ == '__main__':
 
     with tf.Graph().as_default():
 
-        gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=cfg.GPU_MEMORY_FRACTION,
+        gpu_options = tf.compat.v1.GPUOptions(per_process_gpu_memory_fraction=cfg.GPU_MEMORY_FRACTION,
                             visible_device_list=cfg.GPU_AVAILABLE,
                             allow_growth=True)
     
